@@ -187,7 +187,7 @@ function consume(a, b, cb) {
  */
 
 function add(num1, num2) {
-  /*Your Code Here*/
+  return num1 + num2;
 }
 
 /* Use multiply to do the following:
@@ -195,8 +195,8 @@ function add(num1, num2) {
 2. Return the product of those numbers
 */
 
-function multiply(/*Your Code Here */) {
-  /*Your Code Here */
+function multiply(num1, num2) {
+  return num1 * num2;
 }
 
 /* Use greeting to do the following:
@@ -205,15 +205,15 @@ function multiply(/*Your Code Here */) {
 💡 NOTE: The string returned must match the format above or the test will not pass!
 */
 
-function greeting(/*Your Code Here */) {
-  return; /*Your Code Here */
+function greeting(firstName, lastName) {
+  return `Hello ${firstName} ${lastName}, nice to meet you!`;
 }
 
 // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume('Mary', 'Poppins', greeting)); // Hello Mary Poppins, nice to meet you!
 
 // 🐴🐴🐴 Topic 3: Prototypes 🐴🐴🐴 //
 
