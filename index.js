@@ -111,8 +111,16 @@ const zooAnimals = [
   💡 NOTE: the array returned should be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-function animalNames(/*Your Code Here*/) {
-  /*Your Code Here*/
+function animalNames(zooAnimals) {
+  const animalNames = [];
+
+  zooAnimals.forEach((animal) =>
+    animalNames.push(
+      `name: ${animal.animal_name}, scientific: ${animal.scientific_name}`
+    )
+  );
+
+  return animalNames;
 }
 
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -125,9 +133,11 @@ function animalNames(/*Your Code Here*/) {
   💡 NOTE: Do some research for other methods that can help help you
   */
 
-function lowerCaseNames(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lowerCaseNames(zooAnimals) {
+  return zooAnimals.map((animal) => animal.animal_name.toLowerCase());
 }
+
+console.log(lowerCaseNames(zooAnimals));
 
 /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
@@ -137,8 +147,8 @@ function lowerCaseNames(/*Your Code Here*/) {
   3. Return this new array
   */
 
-function lowPopulationAnimals(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lowPopulationAnimals(zooAnimals) {
+  return zooAnimals.filter((animal) => animal.population < 5);
 }
 
 /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
@@ -150,8 +160,10 @@ function lowPopulationAnimals(/*Your Code Here*/) {
   💡 NOTE: Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count. Check MDN/W3Schools for syntax!
   */
 
-function USApop(/*Your Code Here*/) {
-  /*Your Code Here*/
+function USApop(zooAnimals) {
+  return zooAnimals.reduce((acc, curr) => {
+    return acc + curr.population;
+  }, 0);
 }
 
 // 🦁🦁🦁 Callbacks 🦁🦁🦁
@@ -163,8 +175,8 @@ function USApop(/*Your Code Here*/) {
     💡 NOTE: The tests for 'consume' will pass if it is created correctly and also after you correctly complete the functions 'add' and 'greeting' below in Step 2.
   */
 
-function consume(/*Your Code Here */) {
-  /*Your Code Here */
+function consume(a, b, cb) {
+  return cb(a, b);
 }
 
 // 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁
@@ -174,7 +186,7 @@ function consume(/*Your Code Here */) {
  2. Return the sum of those numbers
  */
 
-function add(/*Your Code Here */) {
+function add(num1, num2) {
   /*Your Code Here*/
 }
 
